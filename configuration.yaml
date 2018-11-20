@@ -1,0 +1,47 @@
+homeassistant:
+  name: Home
+  latitude: -31.929
+  longitude: 115.870
+  elevation: 0
+  unit_system: metric
+  time_zone: Australia/Perth
+  customize: !include customize.yaml
+
+# Show UI
+frontend:
+http:
+config:
+history:
+logbook:
+updater:
+discovery:
+conversation:
+
+# Included modules
+sun:
+wemo:
+lifx:
+cast:
+
+media_player:
+  - platform: plex
+
+mqtt:
+  broker: !secret mqtt_host
+  port: 1883
+  client_id: home-assistant
+  username: mqtt
+  password: !secret mqtt_password
+
+google_assistant:
+  project_id: !secret google_id
+
+# Includes
+camera: !include cameras.yaml
+binary_sensor: !include binary_sensors.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+switch: !include switches.yaml
+sensor: !include sensors.yaml
+device_tracker: !include trackers.yaml

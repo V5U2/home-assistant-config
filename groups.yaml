@@ -1,0 +1,141 @@
+##################################
+# GROUPS
+##################################
+
+james_bedroom_lights:
+  name: James Bedroom Lights
+  entities:
+    - light.ceiling
+    - switch.desk_lamp
+    - switch.wemo_insight
+
+james_bedroom_automations:
+  name: James Bedroom Automations
+  entities:
+    - automation.turn_on_bed_lamp_when_its_dark
+    - automation.turn_off_desk_lamp_when_away_from_computer
+    - automation.turn_on_desk_lamp_when_using_computer
+    - automation.use_lamps_when_sun_sets
+    - automation.turn_on_ceiling_light_when_its_getting_dark
+    - automation.turn_on_bed_lamp_when_i_arrive_home_at_night
+    - automation.turn_lights_off_when_away
+
+james_bedroom_scripts:
+  name: James Bedroom Scripts
+  entities:
+    - script.nightlights_james
+    - script.goodnight_james
+
+server_room_fans:
+  name: Server Room Fans
+  entities:
+    - switch.server_fan
+    - automation.server_room_temp_high
+    - automation.server_room_temp_normal
+
+bathroom_fans:
+  name: Bathroom Fans
+  entities:
+    - switch.bathroom_fan
+    - automation.upstairs_bathroom_humidity_high
+    - automation.upstairs_bathroom_humidity_normal
+
+speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+bom:
+  name: BOM Sensors
+  entities:
+    - sensor.bom_feels_like_c
+    - sensor.bom_air_temp_c
+    - sensor.bom_relative_humidity
+
+pv:
+  name: PV Array
+  entities:
+    - sensor.power_generation
+    - sensor.energy_generation
+
+
+##################################
+# VIEWS
+##################################
+
+Default_View:
+  name: House
+  view: yes
+  entities:
+    - sensor.bom_feels_like_c
+    - sensor.bom_relative_humidity
+    - group.speedtest
+    - group.pv
+
+James Bedroom:
+  name: James Bedroom
+  view: yes
+  entities:
+    - group.james_bedroom_lights
+    - device_tracker.james
+    - group.james_bedroom_automations
+    - group.james_bedroom_scripts
+
+Living Room:  
+  name: Living Room
+  view: yes
+  entities:
+    - media_player.living_room_tv
+
+Front Room:
+  name: Front Room
+  view: yes
+  entities:
+    - media_player.front_room_tv
+
+Upstairs Bathroom:
+  name: Upstairs Bathroom
+  view: yes
+  entities:
+    - group.bathroom_fans
+    - sensor.bathroom_temperature
+    - sensor.bathroom_humidity
+
+Server Room:
+  name: Server Room
+  view: yes
+  entities:
+    - group.server_room_fans
+    - sensor.server_temperature
+    - sensor.server_humidity
+
+Alfresco:
+  name: Alfresco
+  view: yes
+  entities:
+    - media_player.alfresco_speaker
+    - binary_sensor.ip_camera_motion
+    - camera.courtyard
+
+Garage:
+  name: Garage
+  view: yes
+  entities:
+    - media_player.garage_tv
+    - binary_sensor.ip_camera_motion_4
+    - binary_sensor.ip_camera_motion_5
+    - camera.garage_inside
+    - camera.garage_rear
+
+Outside:
+  name: Outside
+  view: yes
+  entities:
+    - camera.driveway
+    - camera.front_entrance
+    - binary_sensor.ip_camera_motion_2
+    - binary_sensor.ip_camera_motion_3
+    - group.bom
+    - group.pv

@@ -1,0 +1,19 @@
+- platform: generic
+  name: Garage Rear
+  still_image_url: !secret camera1_url
+
+- platform: generic
+  name: Driveway
+  still_image_url: !secret camera2_url
+
+- platform: generic
+  name: Garage Inside
+  still_image_url: !secret camera3_url
+
+- platform: generic
+  name: Courtyard
+  still_image_url: !secret camera4_url
+
+- platform: generic
+  name: Front Entrance
+  still_image_url: !secret camera5_url

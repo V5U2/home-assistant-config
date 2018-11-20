@@ -1,0 +1,19 @@
+switch.desk_lamp:
+  icon: 'mdi:lightbulb'
+switch.wemo_insight:
+  icon: 'mdi:lightbulb'
+
+sun.sun:
+  hidden: true
+sensor.steam_76561198017132040:
+  hidden: true
+
+switch.bathroom_fan:
+  icon: 'mdi:fan'
+switch.server_fan:
+  icon: 'mdi:fan'
+
+sensor.power_generation:
+  icon: 'mdi:flash'
+sensor.energy_generation:
+  icon: 'mdi:flash'
