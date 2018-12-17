@@ -1,17 +1,17 @@
 goodnight_james:
-  alias: Goodnight
+  alias: James Goodnight
   sequence:
     - service: light.turn_off
       data:
         entity_id: light.ceiling
     - service: switch.turn_off
       data:
-        entity_id: 
-          - switch.wemo_insight
+        entity_id:
           - switch.desk_lamp
+          - switch.bed_lamp
 
 nightlights_james:
-  alias: Night Lights
+  alias: Night Mood
   sequence:
     - service: light.turn_off
       data:
@@ -19,5 +19,16 @@ nightlights_james:
     - service: switch.turn_on
       data:
         entity_id: 
-          - switch.wemo_insight
+          - switch.bed_lamp
           - switch.desk_lamp
+
+tvlights_theater:
+  alias: Movie Mode
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.theater_room
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.theater_lamp

@@ -1,6 +1,12 @@
 switch.desk_lamp:
   icon: 'mdi:lightbulb'
-switch.wemo_insight:
+switch.bed_lamp:
+  icon: 'mdi:lightbulb'
+
+switch.theater_lamp:
+  icon: 'mdi:lightbulb'
+
+switch.backyard_garden_lights:
   icon: 'mdi:lightbulb'
 
 sun.sun:
@@ -17,3 +23,6 @@ sensor.power_generation:
   icon: 'mdi:flash'
 sensor.energy_generation:
   icon: 'mdi:flash'
+
+sensor.bom_relative_humidity:
+  icon: 'mdi:water-percent'

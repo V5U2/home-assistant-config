@@ -19,7 +19,6 @@ conversation:
 
 # Included modules
 sun:
-wemo:
 lifx:
 cast:
 
@@ -43,5 +42,6 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 switch: !include switches.yaml
+light: !include lights.yaml
 sensor: !include sensors.yaml
 device_tracker: !include trackers.yaml

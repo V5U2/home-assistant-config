@@ -2,12 +2,14 @@
 # GROUPS
 ##################################
 
+## James Room
+
 james_bedroom_lights:
   name: James Bedroom Lights
   entities:
     - light.ceiling
     - switch.desk_lamp
-    - switch.wemo_insight
+    - switch.bed_lamp
 
 james_bedroom_automations:
   name: James Bedroom Automations
@@ -25,6 +27,12 @@ james_bedroom_scripts:
   entities:
     - script.nightlights_james
     - script.goodnight_james
+
+theater_lights:
+  name: Theater Lights
+  entities:
+    - light.theater_room
+    - switch.theater_lamp
 
 server_room_fans:
   name: Server Room Fans
@@ -60,6 +68,14 @@ pv:
     - sensor.power_generation
     - sensor.energy_generation
 
+cams:
+  name: Cameras
+  entities:
+    - camera.garage_inside
+    - camera.garage_rear
+    - camera.courtyard
+    - camera.driveway
+    - camera.front_entrance
 
 ##################################
 # VIEWS
@@ -69,10 +85,10 @@ Default_View:
   name: House
   view: yes
   entities:
-    - sensor.bom_feels_like_c
-    - sensor.bom_relative_humidity
+    - group.bom
     - group.speedtest
     - group.pv
+    - switch.backyard_garden_lights
 
 James Bedroom:
   name: James Bedroom
@@ -111,31 +127,21 @@ Server Room:
     - sensor.server_temperature
     - sensor.server_humidity
 
-Alfresco:
-  name: Alfresco
+Theater:
+  name: Theater
   view: yes
   entities:
-    - media_player.alfresco_speaker
-    - binary_sensor.ip_camera_motion
-    - camera.courtyard
+    - group.theater_lights
+    - script.tvlights_theater
 
 Garage:
   name: Garage
   view: yes
   entities:
     - media_player.garage_tv
-    - binary_sensor.ip_camera_motion_4
-    - binary_sensor.ip_camera_motion_5
-    - camera.garage_inside
-    - camera.garage_rear
 
 Outside:
-  name: Outside
+  name: Cameras
   view: yes
   entities:
-    - camera.driveway
-    - camera.front_entrance
-    - binary_sensor.ip_camera_motion_2
-    - binary_sensor.ip_camera_motion_3
-    - group.bom
-    - group.pv
+    - group.cams
