@@ -28,25 +28,59 @@ james_bedroom_scripts:
     - script.nightlights_james
     - script.goodnight_james
 
+
+## Theater
+
 theater_lights:
   name: Theater Lights
   entities:
     - light.theater_room
     - switch.theater_lamp
 
+theater_scripts:
+  name: Theater Scripts
+  entities:
+    - script.tvlights_theater
+
+## Server Room
+
 server_room_fans:
-  name: Server Room Fans
+  name: Server Room Fan
   entities:
     - switch.server_fan
+    - sensor.server_temperature
+    - sensor.server_humidity
+
+server_room_automations:
+  name: Server Room Automations
+  entities:
     - automation.server_room_temp_high
     - automation.server_room_temp_normal
 
+
+## Bathroom
+
 bathroom_fans:
-  name: Bathroom Fans
+  name: Bathroom Fan
   entities:
     - switch.bathroom_fan
+    - sensor.bathroom_temperature
+    - sensor.bathroom_humidity
+
+bathroom_automations:
+  name: Bathroom Automations
+  entities:
     - automation.upstairs_bathroom_humidity_high
     - automation.upstairs_bathroom_humidity_normal
+
+
+## Outside
+
+outside_lights:
+  name: Outdoor Lights
+  entities:
+    - switch.backyard_garden_lights
+    - switch.pool_lights
 
 speedtest:
   name: Speedtest
@@ -82,66 +116,48 @@ cams:
 ##################################
 
 Default_View:
-  name: House
+  name: Outside
   view: yes
   entities:
     - group.bom
     - group.speedtest
     - group.pv
-    - switch.backyard_garden_lights
+    - group.outside_lights
+    - media_player.garage_tv
+    - camera.bom_radar
 
-James Bedroom:
-  name: James Bedroom
+Upstairs:
+  name: Upstairs
   view: yes
   entities:
-    - group.james_bedroom_lights
     - device_tracker.james
-    - group.james_bedroom_automations
-    - group.james_bedroom_scripts
+    - group.james_bedroom_lights
+    - group.theater_lights
+    - group.server_room_fans
+    - group.bathroom_fans
+    
 
-Living Room:  
-  name: Living Room
+Downstairs:  
+  name: Downstairs
   view: yes
   entities:
     - media_player.living_room_tv
-
-Front Room:
-  name: Front Room
-  view: yes
-  entities:
+    - media_player.apple_tv_2
     - media_player.front_room_tv
+    - media_player.alfresco_speaker
 
-Upstairs Bathroom:
-  name: Upstairs Bathroom
-  view: yes
-  entities:
-    - group.bathroom_fans
-    - sensor.bathroom_temperature
-    - sensor.bathroom_humidity
-
-Server Room:
-  name: Server Room
-  view: yes
-  entities:
-    - group.server_room_fans
-    - sensor.server_temperature
-    - sensor.server_humidity
-
-Theater:
-  name: Theater
-  view: yes
-  entities:
-    - group.theater_lights
-    - script.tvlights_theater
-
-Garage:
-  name: Garage
-  view: yes
-  entities:
-    - media_player.garage_tv
-
-Outside:
+Cameras:
   name: Cameras
   view: yes
   entities:
     - group.cams
+
+Automations:
+  name: Automations
+  view: yes
+  entities:
+    - group.james_bedroom_automations
+    - group.james_bedroom_scripts
+    - group.theater_scripts
+    - group.server_room_automations
+    - group.bathroom_automations

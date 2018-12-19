@@ -17,3 +17,8 @@
 - platform: generic
   name: Front Entrance
   still_image_url: !secret camera5_url
+
+- platform: generic
+  name: BOM Radar
+  still_image_url: !secret bom_url
+  content_type: 'image/gif'

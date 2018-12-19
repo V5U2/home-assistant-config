@@ -1,19 +1,22 @@
+# Switches that are lamps
 switch.desk_lamp:
   icon: 'mdi:lightbulb'
 switch.bed_lamp:
   icon: 'mdi:lightbulb'
-
 switch.theater_lamp:
   icon: 'mdi:lightbulb'
-
 switch.backyard_garden_lights:
   icon: 'mdi:lightbulb'
+switch.pool_lights:
+  icon: 'mdi:lightbulb'
 
+# Hide Sun
 sun.sun:
   hidden: true
 sensor.steam_76561198017132040:
   hidden: true
 
+# Fans
 switch.bathroom_fan:
   icon: 'mdi:fan'
 switch.server_fan:
@@ -24,5 +27,10 @@ sensor.power_generation:
 sensor.energy_generation:
   icon: 'mdi:flash'
 
+# Humidity
 sensor.bom_relative_humidity:
+  icon: 'mdi:water-percent'
+sensor.bathroom_humidity:
+  icon: 'mdi:water-percent'
+sensor.server_humidity:
   icon: 'mdi:water-percent'

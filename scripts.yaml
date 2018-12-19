@@ -1,5 +1,5 @@
-goodnight_james:
-  alias: James Goodnight
+james_lightsoff:
+  alias: James Lights Off
   sequence:
     - service: light.turn_off
       data:
