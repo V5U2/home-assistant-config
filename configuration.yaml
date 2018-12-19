@@ -36,12 +36,13 @@ google_assistant:
   project_id: !secret google_id
 
 # Includes
+switch: !include_dir_merge_list switches/
+automation: !include_dir_merge_list automations/
+
 camera: !include cameras.yaml
 binary_sensor: !include binary_sensors.yaml
 group: !include groups.yaml
-automation: !include automations.yaml
 script: !include scripts.yaml
-switch: !include switches.yaml
 light: !include lights.yaml
 sensor: !include sensors.yaml
 device_tracker: !include trackers.yaml
