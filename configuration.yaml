@@ -1,10 +1,10 @@
 homeassistant:
   name: Home
-  latitude: -31.929
-  longitude: 115.870
+  latitude: !secret home_lat
+  longitude: !secret home_long
   elevation: 0
   unit_system: metric
-  time_zone: Australia/Perth
+  time_zone: !secret home_time
   customize: !include customize.yaml
 
 frontend:
@@ -12,7 +12,23 @@ frontend:
 
 http:
 config:
+
 history:
+  exclude:
+    domains:
+      - automation
+      - camera
+      - group
+      - media_player
+      - script
+    entities:
+      - sensor.bom_feels_like_c
+      - sensor.bom_air_temp_c
+      - sensor.bom_relative_humidity
+      - sensor.power_generation
+      - sensor.energy_generation
+      - sensor.pvoutput
+
 logbook:
 updater:
 discovery:
@@ -22,6 +38,23 @@ conversation:
 sun:
 lifx:
 cast:
+
+openuv:
+  api_key: !secret openuv_api
+  binary_sensors:
+    monitored_conditions:
+      - uv_protection_window
+  sensors:
+    monitored_conditions:
+      - current_ozone_level
+      - current_uv_index
+      - current_uv_level
+      - max_uv_index
+      - safe_exposure_time_type_1
+
+hue:
+  bridges:
+    - host: !secret hue_host
 
 media_player:
   - platform: plex

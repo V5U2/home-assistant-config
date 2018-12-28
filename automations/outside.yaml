@@ -4,7 +4,7 @@
     offset: -01:00:00
     platform: sun
   action:
-  - entity_id: group.outside_lights
+  - entity_id: group.garden_lights
     service: homeassistant.turn_on
 
 - alias: Turn lights off at midnight
@@ -12,5 +12,5 @@
     platform: time
     at: '22:30:00'
   action:
-  - entity_id: group.outside_lights
-    service: homeassistant.turn_on
+  - entity_id: group.garden_lights
+    service: homeassistant.turn_off
