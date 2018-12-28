@@ -35,14 +35,18 @@ mqtt:
 
 google_assistant:
   project_id: !secret google_id
+  exposed_domains:
+    - switch
+    - light
+    - lifx
 
 # Includes
 switch: !include_dir_merge_list switches/
 automation: !include_dir_merge_list automations/
+group: !include_dir_merge_named groups/
 
 camera: !include cameras.yaml
-binary_sensor: !include binary_sensors.yaml
-group: !include groups.yaml
+#binary_sensor: !include binary_sensors.yaml
 script: !include scripts.yaml
 light: !include lights.yaml
 sensor: !include sensors.yaml

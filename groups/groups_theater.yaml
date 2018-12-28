@@ -1,0 +1,10 @@
+theater_lights:
+  name: Theater Lights
+  entities:
+    - light.theater_room
+    - switch.theater_lamp
+
+theater_scripts:
+  name: Theater Scripts
+  entities:
+    - script.tvlights_theater

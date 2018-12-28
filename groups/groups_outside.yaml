@@ -1,0 +1,47 @@
+garden_lights:
+  name: Garden Lights
+  entities:
+    - switch.backyard_garden_lights
+    - switch.pool_lights
+    - switch.front_lights
+
+alfresco_lights:
+  name: Alfresco Lights
+  entities:
+    - light.hue_ambiance_lamp_1
+    - light.hue_ambiance_lamp_2
+
+speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+bom:
+  name: BOM Sensors
+  entities:
+    - sensor.bom_feels_like_c
+    - sensor.bom_air_temp_c
+    - sensor.bom_relative_humidity
+
+pv:
+  name: PV Array
+  entities:
+    - sensor.power_generation
+    - sensor.energy_generation
+
+uvinfo:
+  name: UV Information
+  entities:
+    - sensor.current_uv_level
+    - sensor.skin_type_1_safe_exposure_time
+
+cams:
+  name: Cameras
+  entities:
+    - camera.garage_inside
+    - camera.garage_rear
+    - camera.courtyard
+    - camera.driveway
+    - camera.front_entrance
