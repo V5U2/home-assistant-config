@@ -60,6 +60,20 @@
   payload_available: "Online"
   payload_not_available: "Offline"
 
+# Study Cabinet Sensors
+- platform: mqtt
+  name: "Study Temperature"
+  state_topic: "ds-cabinet/sensor"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+  retain: true
+- platform: mqtt
+  name: "Study Humidity"
+  state_topic: "ds-cabinet/sensor"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+  retain: true
+
 # Bathroom Sensors
 - platform: mqtt
   name: "Bathroom Temperature"
@@ -77,3 +91,8 @@
   availability_topic: "tele/sonoff3/LWT"
   payload_available: "Online"
   payload_not_available: "Offline"
+
+
+- platform: hue
+  ip_address: !secret hue_host
+  token: VpY06xWkvDjWkZPnfvOM6k1yd2rimv7OBOXbt9ID

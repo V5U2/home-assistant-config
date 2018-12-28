@@ -9,6 +9,8 @@ switch.backyard_garden_lights:
   icon: 'mdi:lightbulb'
 switch.pool_lights:
   icon: 'mdi:lightbulb'
+switch.front_lights:
+  icon: 'mdi:lightbulb'
 
 # Hide Sun
 sun.sun:
@@ -33,4 +35,6 @@ sensor.bom_relative_humidity:
 sensor.bathroom_humidity:
   icon: 'mdi:water-percent'
 sensor.server_humidity:
+  icon: 'mdi:water-percent'
+sensor.study_humidity:
   icon: 'mdi:water-percent'
