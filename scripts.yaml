@@ -32,3 +32,75 @@ tvlights_theater:
       data:
         entity_id: 
           - switch.theater_lamp
+
+timed_bathroom_fan:
+  alias: "Turn on bathroom fan and set timer"
+  sequence:
+    # Cancel old timers
+    - service: script.turn_off
+      data:
+         entity_id: script.bathroom_timer_off
+    - service: switch.turn_on
+      data:
+        entity_id: switch.bathroom_fan
+    # Set new timer
+    - service: script.turn_on
+      data:
+        entity_id: script.bathroom_timer_off
+
+bathroom_timer_off:
+  alias: "Turn off bathroom fan after 5 minutes"
+  sequence:
+    - delay:
+        minutes: 5
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bathroom_fan
+
+hallway_nightlight:
+  alias: "Night Lighting"
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness_pct: 20
+        entity_id:
+          - light.hue_white_lamp_2
+          - light.hue_ambiance_downlight_1
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_white_lamp_1
+
+hallway_daylight:
+  alias: "Day Lighting"
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness_pct: 100
+        entity_id:
+          - light.hue_white_lamp_2
+          - light.hue_ambiance_downlight_1
+          - light.hue_white_lamp_1
+
+hallway_off:
+  alias: "Turn Off"
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_white_lamp_2
+          - light.hue_ambiance_downlight_1
+          - light.hue_white_lamp_1
+
+gate_interact:
+  alias: 'Move the gate'
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "sensor/gate/action1"
+        payload: "OPEN"
+    - delay: '00:00:04'
+    - service: mqtt.publish
+      data:
+        topic: "sensor/gate/action1"
+        payload: "OPEN"

@@ -92,7 +92,9 @@
   payload_available: "Online"
   payload_not_available: "Offline"
 
-
 - platform: hue
   ip_address: !secret hue_host
   token: VpY06xWkvDjWkZPnfvOM6k1yd2rimv7OBOXbt9ID
+
+- platform: aftership
+  api_key: !secret aftership_key

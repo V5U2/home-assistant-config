@@ -1,59 +1,7 @@
-- platform: hikvision
-  host: !secret camera1_ip
-  port: 80
-  ssl: false
-  username: !secret hik_user
-  password: !secret hik_password
-  customize:
-    motion:
-      delay: 30
-    line_crossing:
-      ignored: true
-
-- platform: hikvision
-  host: !secret camera1_ip
-  port: 80
-  ssl: false
-  username: !secret hik_user
-  password: !secret hik_password
-  customize:
-    motion:
-      delay: 30
-    line_crossing:
-      ignored: true
-
-- platform: hikvision
-  host: !secret camera1_ip
-  port: 80
-  ssl: false
-  username: !secret hik_user
-  password: !secret hik_password
-  customize:
-    motion:
-      delay: 30
-    line_crossing:
-      ignored: true
-
-- platform: hikvision
-  host: !secret camera1_ip
-  port: 80
-  ssl: false
-  username: !secret hik_user
-  password: !secret hik_password
-  customize:
-    motion:
-      delay: 30
-    line_crossing:
-      ignored: true
-
-- platform: hikvision
-  host: !secret camera1_ip
-  port: 80
-  ssl: false
-  username: !secret hik_user
-  password: !secret hik_password
-  customize:
-    motion:
-      delay: 30
-    line_crossing:
-      ignored: true
+- platform: mqtt
+  name: "gate"
+  state_topic: "sensor/gate/state1"
+  payload_on: "closed"
+  payload_off: "open"
+  optomistic: false
+  retain: true

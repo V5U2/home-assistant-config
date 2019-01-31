@@ -1,6 +1,7 @@
 james_bedroom_lights:
   name: James Bedroom Lights
   entities:
+    - script.nightlights_james
     - light.ceiling
     - switch.desk_lamp
     - switch.bed_lamp

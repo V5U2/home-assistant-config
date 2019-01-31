@@ -7,10 +7,62 @@
   - entity_id: group.garden_lights
     service: homeassistant.turn_on
 
-- alias: Turn lights off at midnight
+- alias: Turn lights off at 10:30
   trigger:
     platform: time
     at: '22:30:00'
   action:
   - entity_id: group.garden_lights
     service: homeassistant.turn_off
+
+- alias: Hide Sun related info at night
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.uvinfo
+      - group.pv
+    data:
+      visible: False
+
+- alias: Show Sun related info during the day
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.uvinfo
+      - group.pv
+    data:
+      visible: True
+
+- alias: Garage door left open
+  trigger:
+    - platform: state
+      entity_id: cover.garage
+      to: 'Open'
+      for:
+        minutes: 15
+  action:
+    - service: notify.pushover
+      data:
+        title: "Garage Door Open for 15 minutes"
+        data:
+          url: "https://hass.borrett.me/"
+
+- alias: Front Gate left open
+  trigger:
+    - platform: state
+      entity_id: cover.gate
+      to: 'Open'
+      for:
+        minutes: 15
+  action:
+    - service: notify.pushover
+      data:
+        title: "Front Gate Open for 15 minutes"
+        data:
+          url: "https://hass.borrett.me/"

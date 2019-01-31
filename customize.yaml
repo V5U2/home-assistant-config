@@ -11,6 +11,8 @@ switch.pool_lights:
   icon: 'mdi:lightbulb'
 switch.front_lights:
   icon: 'mdi:lightbulb'
+switch.hallway_stairs:
+  icon: 'mdi:lightbulb'
 
 # Hide Sun
 sun.sun:
@@ -38,3 +40,27 @@ sensor.server_humidity:
   icon: 'mdi:water-percent'
 sensor.study_humidity:
   icon: 'mdi:water-percent'
+
+# Garage Door
+cover.garage:
+  device_class: garage
+  friendly_name: Garage Door
+cover.gate:
+  device_class: garage
+  friendly_name: Front Gate
+
+# Scripts
+script.hallway_nightlight:
+  icon: 'mdi:weather-night'
+script.hallway_daylight:
+  icon: 'mdi:weather-sunny'
+script.hallway_off:
+  icon: 'mdi:lightbulb'
+script.tvlights_theater:
+  icon: 'mdi:movie'
+script.nightlights_james:
+  icon: 'mdi:weather-night'
+
+# Aftership
+sensor.aftership:
+  friendly_name: In Transit

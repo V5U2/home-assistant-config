@@ -10,3 +10,4 @@ bathroom_automations:
   entities:
     - automation.upstairs_bathroom_humidity_high
     - automation.upstairs_bathroom_humidity_normal
+    - automation.turn_on_fan_when_humidity_is_high

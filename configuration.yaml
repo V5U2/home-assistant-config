@@ -39,6 +39,12 @@ sun:
 lifx:
 cast:
 
+notify:
+  - name: pushover
+    platform: pushover
+    api_key: !secret pushover_api
+    user_key: !secret pushover_user
+
 openuv:
   api_key: !secret openuv_api
   binary_sensors:
@@ -63,7 +69,7 @@ mqtt:
   broker: !secret mqtt_host
   port: 1883
   client_id: home-assistant
-  username: mqtt
+  username: !secret mqtt_user
   password: !secret mqtt_password
 
 google_assistant:
@@ -79,8 +85,10 @@ automation: !include_dir_merge_list automations/
 group: !include_dir_merge_named groups/
 
 camera: !include cameras.yaml
-#binary_sensor: !include binary_sensors.yaml
+binary_sensor: !include binary_sensors.yaml
 script: !include scripts.yaml
 light: !include lights.yaml
 sensor: !include sensors.yaml
 device_tracker: !include trackers.yaml
+
+cover: !include covers.yaml
