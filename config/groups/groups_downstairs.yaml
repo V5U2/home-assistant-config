@@ -1,0 +1,16 @@
+study_sensor:
+  name: Paul Study
+  entities:
+    - sensor.study_temperature
+    - sensor.study_humidity
+
+james_study:
+  name: James Study
+  entities:
+    - switch.james_desk_lamp
+    - switch.james_study_corner
+
+living_room:
+  name: Living Room
+  entities:
+    - switch.living_room_lamp

@@ -1,0 +1,13 @@
+bathroom_fans:
+  name: Bathroom Fan
+  entities:
+    - switch.bathroom_fan
+    - sensor.bathroom_temperature
+    - sensor.bathroom_humidity
+
+bathroom_automations:
+  name: Bathroom Automations
+  entities:
+    - automation.upstairs_bathroom_humidity_high
+    - automation.upstairs_bathroom_humidity_normal
+    - automation.turn_on_fan_when_humidity_is_high

@@ -1,7 +1,0 @@
-- platform: mqtt
-  name: "gate"
-  state_topic: "sensor/gate/state1"
-  payload_on: "closed"
-  payload_off: "open"
-  optomistic: false
-  retain: true

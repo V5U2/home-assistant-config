@@ -1,0 +1,19 @@
+- alias: Server Room Temp High
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.server_temperature
+    #value_template: '{{ sensor.guest_bathroom_humidity - sensor.house_humidity }}'
+    above: 30
+  action:
+  - entity_id: switch.server_fan
+    service: homeassistant.turn_on
+
+- alias: Server Room Temp Normal
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.server_temperature
+    #value_template: '{{ sensor.guest_bathroom_humidity - sensor.house_humidity }}'
+    below: 27
+  action:
+  - entity_id: switch.server_fan
+    service: homeassistant.turn_off

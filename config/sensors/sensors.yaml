@@ -1,0 +1,87 @@
+# Environmental sensors
+- platform: bom
+  station: !secret bom_station
+  monitored_conditions:
+    - apparent_t
+    - rel_hum
+    - air_temp
+
+- platform: steam_online
+  api_key: !secret steam_api
+  accounts:
+    - !secret steam_user
+
+# # Solar Output
+# - platform: pvoutput
+#   system_id: 17406
+#   api_key: !secret pv_api
+#   scan_interval: 120
+# - platform: template
+#   sensors:
+#     power_generation:
+#       value_template: '{% if is_state_attr("sensor.pvoutput", "power_generation", "NaN") %}0{% else %}{{ states.sensor.pvoutput.attributes.power_generation }}{% endif %}'
+#       friendly_name: 'Generating Right Now'
+#       unit_of_measurement: 'Watt'
+#     energy_generation:
+#       value_template: '{% if is_state_attr("sensor.pvoutput", "energy_generation", "NaN") %}0{% else %}{{ "%0.2f"|format(states.sensor.pvoutput.attributes.energy_generation|float/1000) }}{% endif %}'
+#       friendly_name: 'Generated Today'
+#       unit_of_measurement: 'kWh'
+
+# Server Sensors
+- platform: mqtt
+  name: "Server Temperature"
+  state_topic: "tele/sonoff2/SENSOR"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+  availability_topic: "tele/sonoff2/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "Server Humidity"
+  state_topic: "tele/sonoff2/SENSOR"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+  availability_topic: "tele/sonoff2/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# Study Cabinet Sensors
+- platform: mqtt
+  name: "Study Temperature"
+  state_topic: "ds-cabinet/sensor"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "Study Humidity"
+  state_topic: "ds-cabinet/sensor"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+
+# Bathroom Sensors
+- platform: mqtt
+  name: "Bathroom Temperature"
+  state_topic: "tele/sonoff3/SENSOR"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+  availability_topic: "tele/sonoff3/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "Bathroom Humidity"
+  state_topic: "tele/sonoff3/SENSOR"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+  availability_topic: "tele/sonoff3/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+- platform: hue
+  ip_address: !secret hue_host
+  token: VpY06xWkvDjWkZPnfvOM6k1yd2rimv7OBOXbt9ID
+
+- platform: aftership
+  api_key: !secret aftership_key
+
+- platform: rainbird
+  monitored_conditions:
+    - rainsensor

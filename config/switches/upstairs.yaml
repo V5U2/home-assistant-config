@@ -1,0 +1,39 @@
+# Server Fan
+- platform: mqtt
+  name: "Server Fan"
+  command_topic: "cmnd/sonoff2/power"
+  state_topic: "stat/sonoff2/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+# Bathroom Fan
+- platform: mqtt
+  name: "Bathroom Fan"
+  command_topic: "cmnd/sonoff3/power"
+  state_topic: "stat/sonoff3/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+# Bed Lamp
+- platform: mqtt
+  name: "Bed Lamp"
+  command_topic: "cmnd/sonoff4/power"
+  state_topic: "stat/sonoff4/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+# Theater Lamp
+- platform: mqtt
+  name: "Theater Lamp"
+  command_topic: "cmnd/sonoff5/power"
+  state_topic: "stat/sonoff5/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true

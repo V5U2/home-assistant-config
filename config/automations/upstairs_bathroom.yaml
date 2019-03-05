@@ -1,0 +1,28 @@
+- alias: Upstairs Bathroom Humidity High
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.bathroom_humidity
+    #value_template: '{{ sensor.guest_bathroom_humidity - sensor.house_humidity }}'
+    above: 90
+  action:
+  - entity_id: switch.bathroom_fan
+    service: homeassistant.turn_on
+
+- alias: Upstairs Bathroom Humidity Normal
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.bathroom_humidity
+    #value_template: '{{ sensor.guest_bathroom_humidity - sensor.house_humidity }}'
+    below: 85
+  action:
+  - entity_id: switch.bathroom_fan
+    service: homeassistant.turn_off
+
+- alias: Turn on fan when humidity is high
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.bathroom_humidity
+    above: 80
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.timed_bathroom_fan

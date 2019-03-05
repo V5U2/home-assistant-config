@@ -1,0 +1,79 @@
+# Switches that are lamps
+switch.desk_lamp:
+  icon: 'mdi:lightbulb'
+switch.bed_lamp:
+  icon: 'mdi:lightbulb'
+switch.theater_lamp:
+  icon: 'mdi:lightbulb'
+switch.backyard_garden_lights:
+  icon: 'mdi:lightbulb'
+switch.pool_lights:
+  icon: 'mdi:lightbulb'
+switch.front_lights:
+  icon: 'mdi:lightbulb'
+switch.hallway_stairs:
+  icon: 'mdi:lightbulb'
+switch.james_desk_lamp:
+  icon: 'mdi:lightbulb'
+switch.living_room_lamp:
+  icon: 'mdi:lightbulb'
+
+# Hide Sun
+sun.sun:
+  hidden: true
+sensor.steam_76561198017132040:
+  hidden: true
+
+# Fans
+switch.bathroom_fan:
+  icon: 'mdi:fan'
+switch.server_fan:
+  icon: 'mdi:fan'
+
+sensor.power_generation:
+  icon: 'mdi:flash'
+sensor.energy_generation:
+  icon: 'mdi:flash'
+
+# Humidity
+sensor.bom_relative_humidity:
+  icon: 'mdi:water-percent'
+sensor.bathroom_humidity:
+  icon: 'mdi:water-percent'
+sensor.server_humidity:
+  icon: 'mdi:water-percent'
+sensor.study_humidity:
+  icon: 'mdi:water-percent'
+
+# Garage Door
+cover.garage:
+  device_class: garage
+  friendly_name: Garage Door
+cover.gate:
+  device_class: garage
+  friendly_name: Front Gate
+
+# Scripts
+script.hallway_nightlight:
+  icon: 'mdi:weather-night'
+script.hallway_daylight:
+  icon: 'mdi:weather-sunny'
+script.hallway_off:
+  icon: 'mdi:lightbulb'
+script.tvlights_theater:
+  icon: 'mdi:movie'
+script.nightlights_james:
+  icon: 'mdi:weather-night'
+
+# Aftership
+sensor.aftership:
+  friendly_name: In Transit
+
+# Car Presence
+binary_sensor.carpresence1:
+  friendly_name: Mazda 3
+  icon: 'mdi:car'
+
+# Rain Bird
+sensor.rainsensor:
+  friendly_name: Irrigation Rain Sensor

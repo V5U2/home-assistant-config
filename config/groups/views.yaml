@@ -1,0 +1,55 @@
+Default_View:
+  name: Outside
+  view: yes
+  entities:
+    - group.garage_doors
+    - group.garden
+    - group.alfresco_lights
+    - group.bom
+    - group.speedtest
+    #- group.pv
+    - group.uvinfo
+    - group.holiday_group
+    - camera.bom_radar
+    - media_player.garage_tv
+    - media_player.alfresco_speaker
+
+Upstairs:
+  name: Upstairs
+  view: yes
+  entities:
+    - device_tracker.james
+    - device_tracker.ryan
+    - sensor.aftership
+    - group.james_bedroom_lights
+    - group.upstairs_hallway_lights
+    - group.theater_lights
+    - group.server_room_fans
+    - group.bathroom_fans
+    - media_player.james_bedroom_speaker
+
+Downstairs:  
+  name: Downstairs
+  view: yes
+  entities:
+    - group.study_sensor
+    - group.james_study
+    - group.living_room
+    - media_player.living_room_tv
+    - media_player.apple_tv_2
+    - media_player.front_room_tv
+    
+Cameras:
+  name: Cameras
+  view: yes
+  entities:
+    - group.cams
+
+Automations:
+  name: Automations
+  view: yes
+  entities:
+    - group.james_bedroom_automations
+    - group.server_room_automations
+    - group.bathroom_automations
+    - binary_sensor.carpresence1

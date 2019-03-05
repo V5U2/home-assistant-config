@@ -1,8 +1,0 @@
-- platform: unifi
-  track_new_devices: no
-  host: !secret unifi_host
-  username: hassio
-  password: !secret unifi_password
-  verify_ssl: false
-  ssid_filter:
-    - !secret home_network

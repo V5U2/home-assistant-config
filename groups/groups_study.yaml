@@ -1,5 +1,0 @@
-study_sensor:
-  name: Study
-  entities:
-    - sensor.study_temperature
-    - sensor.study_humidity
