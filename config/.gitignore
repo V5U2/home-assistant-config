@@ -1,3 +1,5 @@
 secrets.yaml
 known_devices.yaml
 *.conf
+*.pyc
+*.pyo
