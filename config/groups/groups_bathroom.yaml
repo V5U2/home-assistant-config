@@ -1,5 +1,6 @@
 bathroom_fans:
   name: Bathroom Fan
+  control: hidden
   entities:
     - switch.bathroom_fan
     - sensor.bathroom_temperature
@@ -7,6 +8,7 @@ bathroom_fans:
 
 bathroom_automations:
   name: Bathroom Automations
+  control: hidden
   entities:
     - automation.upstairs_bathroom_humidity_high
     - automation.upstairs_bathroom_humidity_normal

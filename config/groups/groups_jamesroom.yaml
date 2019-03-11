@@ -7,17 +7,18 @@ james_bedroom_lights:
 
 james_bedroom_automations:
   name: James Bedroom Automations
+  control: hidden
   entities:
-    - automation.turn_on_bed_lamp_when_its_dark
+    - automation.turn_on_bed_lamp_when_dark
     - automation.turn_off_desk_lamp_when_away_from_computer
     - automation.turn_on_desk_lamp_when_using_computer
-    - automation.use_lamps_when_sun_sets
-    - automation.turn_on_ceiling_light_when_its_getting_dark
+    - automation.turn_on_ceiling_light_when_dark
     - automation.turn_on_bed_lamp_when_i_arrive_home_at_night
     - automation.turn_lights_off_when_away
 
 james_bedroom_scripts:
   name: James Bedroom Scripts
+  control: hidden
   entities:
     - script.nightlights_james
     - script.goodnight_james

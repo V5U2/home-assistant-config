@@ -7,5 +7,6 @@ theater_lights:
 
 theater_scripts:
   name: Theater Scripts
+  control: hidden
   entities:
     - script.tvlights_theater
