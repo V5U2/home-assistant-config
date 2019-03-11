@@ -1,0 +1,3 @@
+- platform: ffmpeg_motion
+  name: test motion
+  input: !secret camera1_rtsp

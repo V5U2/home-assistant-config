@@ -56,3 +56,16 @@
   action:
   - service: cover.close_cover
     entity_id: 'cover.gate'
+
+- alias: gate left open
+  trigger:
+    platform: state
+    entity_id: cover.garage
+    to: 'open'
+    for:
+      minutes: 5
+  action:
+  - service: notify.pushover
+    data:
+      message: "Garage door has been open for 5 minutes."
+
