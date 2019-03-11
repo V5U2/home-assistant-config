@@ -10,7 +10,18 @@ homeassistant:
 frontend:
   themes: !include_dir_merge_named themes/
 
+# System Modules
 http:
+system_health:
+
+recorder:
+  purge_keep_days: 3
+
+# UI Modules
+logbook:
+updater:
+discovery:
+conversation:
 config:
 
 history:
@@ -28,13 +39,22 @@ history:
       - sensor.power_generation
       - sensor.energy_generation
       - sensor.pvoutput
+      - sensor.current_ozone_level
+      - sensor.safe_exposure_time_type_1
+      - sensor.max_uv_index
+      - sensor.current_uv_index
+      - sensor.aftership
+      - sensor.hue_dimmer_switch_1
+      - sensor.rainsensor
+      - binary_sensor.protection_window
+      - light.empty
 
-logbook:
-updater:
-discovery:
-conversation:
+lovelace:
+  mode: yaml
 
-# Included modules
+
+# Include modules
+
 sun:
 lifx:
 cast:
@@ -56,11 +76,11 @@ openuv:
       - uv_protection_window
   sensors:
     monitored_conditions:
+      - current_uv_level
+      - safe_exposure_time_type_1
+    # - max_uv_index
     # - current_ozone_level
     # - current_uv_index
-      - current_uv_level
-    # - max_uv_index
-      - safe_exposure_time_type_1
 
 hue:
   bridges:
@@ -98,15 +118,17 @@ input_boolean:
     name: Holiday Mode
     initial: off
 
+
 # Includes
+
 switch: !include_dir_merge_list switches/
 automation: !include_dir_merge_list automations/
 group: !include_dir_merge_named groups/
 sensor: !include_dir_merge_list sensors/
 
+binary_sensor: !include binary_sensors.yaml
 camera: !include cameras.yaml
 script: !include scripts.yaml
 light: !include lights.yaml
-#sensor: !include sensors.yaml
 device_tracker: !include trackers.yaml
 cover: !include covers.yaml

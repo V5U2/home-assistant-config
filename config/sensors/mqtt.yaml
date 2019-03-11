@@ -1,0 +1,47 @@
+# Server Sensors
+- platform: mqtt
+  name: "Server Temperature"
+  state_topic: "tele/sonoff2/SENSOR"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+  availability_topic: "tele/sonoff2/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "Server Humidity"
+  state_topic: "tele/sonoff2/SENSOR"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+  availability_topic: "tele/sonoff2/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# Study Cabinet Sensors
+- platform: mqtt
+  name: "Study Temperature"
+  state_topic: "ds-cabinet/sensor"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "Study Humidity"
+  state_topic: "ds-cabinet/sensor"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+
+# Bathroom Sensors
+- platform: mqtt
+  name: "Bathroom Temperature"
+  state_topic: "tele/sonoff3/SENSOR"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+  availability_topic: "tele/sonoff3/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "Bathroom Humidity"
+  state_topic: "tele/sonoff3/SENSOR"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+  availability_topic: "tele/sonoff3/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
