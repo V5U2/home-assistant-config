@@ -1,0 +1,56 @@
+title: Outside
+cards:
+  
+  - type: entities
+    title: Driveway
+    show_header_toggle: false
+        entities:
+      - cover.garage
+      - cover.gate
+
+  - type: entities
+    title: Garden
+    show_header_toggle: true
+    entities:
+      - switch.backyard_garden_lights
+      - switch.pool_lights
+      - sensor.rainbird_rainsensor
+
+  - type: entities
+    title: Alfresco Lights
+    show_header_toggle: true
+    entities:
+      - light.hue_ambiance_lamp_1
+      - light.hue_ambiance_lamp_2
+
+  - type: entities
+    title: BOM Sensors
+    show_header_toggle: false
+    entities:
+      - sensor.bom_feels_like_c
+      - sensor.bom_air_temp_c
+      - sensor.bom_relative_humidity
+
+  - type: entities
+    title: Speedtest
+    show_header_toggle: false
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+
+  - type: entities
+    title: UV Information
+    show_header_toggle: false
+    entities:
+      - sensor.current_uv_level
+      - sensor.skin_type_1_safe_exposure_time
+
+  - type: entities
+    title: Holiday Mode
+    show_header_toggle: false
+    entities:
+      - input_boolean.holiday_mode
+
+  - type: picture-entity
+    entity: camera.bom_radar

@@ -1,0 +1,45 @@
+title: Upstairs
+badges:
+  - device_tracker.james
+  - device_tracker.ryan
+  - sensor.aftership
+cards:
+  - type: entities
+    entities:
+      - script.nightlights_james
+      - light.ceiling
+      - switch.bed_lamp
+    title: James Bedroom Lights
+    show_header_toggle: true
+  - type: entities
+    entities:
+      - script.hallway_nightlight
+      - script.hallway_daylight
+      - light.hue_white_lamp_1
+      - light.hue_white_lamp_2
+      - light.hue_ambiance_downlight_1
+    title: Hallway Lights
+    show_header_toggle: true
+  - type: entities
+    entities:
+      - light.theater_room
+      - switch.theater_lamp
+      - script.tvlights_theater
+    title: Theater Lights
+    show_header_toggle: true
+  - type: entities
+    entities:
+      - switch.server_fan
+      - sensor.server_temperature
+      - sensor.server_humidity
+    title: Server Room Fan
+    show_header_toggle: false
+  - type: entities
+    entities:
+      - switch.bathroom_fan
+      - sensor.bathroom_temperature
+      - sensor.bathroom_humidity
+    title: Bathroom Fan
+    show_header_toggle: false
+  - type: media-control
+    entity: media_player.james_bedroom_speaker

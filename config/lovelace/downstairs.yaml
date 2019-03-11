@@ -1,0 +1,18 @@
+title: Downstairs
+cards:
+  - type: entities
+    entities:
+      - sensor.study_temperature
+      - sensor.study_humidity
+    title: Paul Study
+    show_header_toggle: false
+  - type: entities
+    entities:
+      - switch.james_desk_lamp
+    title: James Study
+    show_header_toggle: false
+  - type: entities
+    entities:
+      - switch.living_room_lamp
+    title: Living Room
+    show_header_toggle: false

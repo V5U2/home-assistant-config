@@ -3,7 +3,7 @@ garden:
   entities:
     - switch.backyard_garden_lights
     - switch.pool_lights
-    - sensor.rainsensor
+    - sensor.rainbird_rainsensor
 
 christmas_lights:
   name: Christmas Lights

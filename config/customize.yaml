@@ -77,3 +77,5 @@ binary_sensor.carpresence1:
 # Rain Bird
 sensor.rainsensor:
   friendly_name: Irrigation Rain Sensor
+sensor.rainbird_rainsensor:
+  icon: 'mdi:water'

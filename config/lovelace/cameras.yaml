@@ -1,0 +1,16 @@
+title: Cameras
+cards:
+  - type: picture-entity
+    entity: camera.front_entrance
+
+  - type: picture-entity
+    entity: camera.driveway
+
+  - type: picture-entity
+    entity: camera.garage_inside
+
+  - type: picture-entity
+    entity: camera.garage_rear
+    
+  - type: picture-entity
+    entity: camera.courtyard

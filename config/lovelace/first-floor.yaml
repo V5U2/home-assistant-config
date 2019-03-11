@@ -1,0 +1,12 @@
+title: Floorplan
+panel: false
+cards:
+  - type: picture-elements
+    image: /local/first.png
+    elements:
+      - type: state-badge
+        entity: sensor.server_temperature
+        style:
+          top: 58%
+          left: 71%
+          font-size: 0.8rem
