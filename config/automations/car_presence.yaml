@@ -57,15 +57,29 @@
   - service: cover.close_cover
     entity_id: 'cover.gate'
 
-- alias: gate left open
+
+# Notify when covers are left open
+
+- alias: garage left open
   trigger:
     platform: state
     entity_id: cover.garage
+    to: 'open'
+    for:
+      minutes: 15
+  action:
+  - service: notify.pushover
+    data:
+      message: "Garage door has been open for 15 minutes."
+
+- alias: gate left open
+  trigger:
+    platform: state
+    entity_id: cover.gate
     to: 'open'
     for:
       minutes: 5
   action:
   - service: notify.pushover
     data:
-      message: "Garage door has been open for 5 minutes."
-
+      message: "Gate has been open for 5 minutes."
