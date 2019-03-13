@@ -5,41 +5,46 @@ badges:
   - sensor.aftership
 cards:
   - type: entities
+    title: James Bedroom Lights
+    show_header_toggle: true
     entities:
       - script.nightlights_james
       - light.ceiling
       - switch.bed_lamp
-    title: James Bedroom Lights
-    show_header_toggle: true
+    
   - type: entities
+    title: Hallway Lights
+    show_header_toggle: true
     entities:
       - script.hallway_nightlight
       - script.hallway_daylight
       - light.hue_white_lamp_1
       - light.hue_white_lamp_2
       - light.hue_ambiance_downlight_1
-    title: Hallway Lights
-    show_header_toggle: true
+    
   - type: entities
+    title: Theater Lights
+    show_header_toggle: true
     entities:
       - light.theater_room
       - switch.theater_lamp
       - script.tvlights_theater
-    title: Theater Lights
-    show_header_toggle: true
+    
   - type: entities
+    title: Server Room Fan
+    show_header_toggle: false
     entities:
       - switch.server_fan
       - sensor.server_temperature
       - sensor.server_humidity
-    title: Server Room Fan
-    show_header_toggle: false
+    
   - type: entities
+    title: Bathroom Fan
+    show_header_toggle: false
     entities:
       - switch.bathroom_fan
       - sensor.bathroom_temperature
       - sensor.bathroom_humidity
-    title: Bathroom Fan
-    show_header_toggle: false
+    
   - type: media-control
     entity: media_player.james_bedroom_speaker

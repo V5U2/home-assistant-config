@@ -4,7 +4,7 @@ cards:
   - type: entities
     title: Driveway
     show_header_toggle: false
-        entities:
+    entities:
       - cover.garage
       - cover.gate
 

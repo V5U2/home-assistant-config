@@ -10,3 +10,9 @@ cards:
           top: 58%
           left: 71%
           font-size: 0.8rem
+      - type: state-badge
+        entity: sensor.bathroom_temperature
+        style:
+          top: 40%
+          left: 71%
+          font-size: 0.8rem

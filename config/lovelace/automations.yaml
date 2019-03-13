@@ -1,6 +1,8 @@
 title: Automations
 cards:
   - type: entities
+    title: James Bedroom Automations
+    show_header_toggle: false
     entities:
       - automation.turn_on_bed_lamp_when_dark
       - automation.turn_off_desk_lamp_when_away_from_computer
@@ -8,18 +10,18 @@ cards:
       - automation.turn_on_ceiling_light_when_dark
       - automation.turn_on_bed_lamp_when_i_arrive_home_at_night
       - automation.turn_lights_off_when_away
-    title: James Bedroom Automations
-    show_header_toggle: false
+    
   - type: entities
+    title: Server Room Automations
+    show_header_toggle: true
     entities:
       - automation.server_room_temp_high
       - automation.server_room_temp_normal
-    title: Server Room Automations
-    show_header_toggle: true
+    
   - type: entities
+    title: Bathroom Automations
+    show_header_toggle: false
     entities:
       - automation.upstairs_bathroom_humidity_high
       - automation.upstairs_bathroom_humidity_normal
       - automation.turn_on_fan_when_humidity_is_high
-    title: Bathroom Automations
-    show_header_toggle: false
