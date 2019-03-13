@@ -1,3 +1,5 @@
+# Security Cameras
+
 - platform: generic
   name: Garage Rear
   still_image_url: !secret camera1_url
@@ -17,6 +19,9 @@
 - platform: generic
   name: Front Entrance
   still_image_url: !secret camera5_url
+
+
+# Web Cameras
 
 - platform: generic
   name: BOM Radar

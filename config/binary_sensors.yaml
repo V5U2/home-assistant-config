@@ -1,5 +1,29 @@
 - platform: ffmpeg_motion
-  name: test motion
+  name: Garage Rear Motion
   input: !secret camera1_rtsp
+  changes: 20
+  reset: 60
+
+- platform: ffmpeg_motion
+  name: Driveway Motion
+  input: !secret camera2_rtsp
+  changes: 20
+  reset: 60
+
+- platform: ffmpeg_motion
+  name: Garage Inside Motion
+  input: !secret camera3_rtsp
+  changes: 20
+  reset: 60
+
+- platform: ffmpeg_motion
+  name: Courtyard Motion
+  input: !secret camera4_rtsp
+  changes: 20
+  reset: 60
+
+- platform: ffmpeg_motion
+  name: Front Entrance Motion
+  input: !secret camera5_rtsp
   changes: 20
   reset: 60

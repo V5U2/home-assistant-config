@@ -1,7 +1,16 @@
 title: Cameras
 badges:
-  binary_sensor.test_motion
 cards:
+  - type: entities
+    title: Motion Detection
+    show_header_toggle: false
+    entities:
+      - binary_sensor.front_entrance_motion
+      - binary_sensor.driveway_motion
+      - binary_sensor.garage_inside_motion
+      - binary_sensor.garage_rear_motion
+      - binary_sensor.courtyard_motion
+
   - type: picture-entity
     entity: camera.front_entrance
 
