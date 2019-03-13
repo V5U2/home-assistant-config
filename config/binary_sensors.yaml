@@ -1,3 +1,5 @@
 - platform: ffmpeg_motion
   name: test motion
   input: !secret camera1_rtsp
+  changes: 20
+  reset: 60

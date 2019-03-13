@@ -1,4 +1,6 @@
 title: Cameras
+badges:
+  binary_sensor.test_motion
 cards:
   - type: picture-entity
     entity: camera.front_entrance
