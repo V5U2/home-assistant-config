@@ -40,8 +40,5 @@
 #       friendly_name: 'Generated Today'
 #       unit_of_measurement: 'kWh'
 
-
-- platform: hue
-
 - platform: aftership
   api_key: !secret aftership_key

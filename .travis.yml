@@ -5,6 +5,9 @@ python: "3.6.4"
 before_install:
   - touch fake_key.pem
   - mv config/travis_secrets.yaml config/secrets.yaml
+  # Remove custom components for testing
+  - rm -r config/custom_components
+  - rm config/sensors/custom_sensors.yaml
 
 install:
   - pip3 install homeassistant
