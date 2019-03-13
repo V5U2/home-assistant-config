@@ -1,3 +1,3 @@
 # home-assistant-config
 
-<a href="https://travis-ci.org/ooimo/home-assistant-config"><img src="https://travis-ci.org/ooimo/home-assistant-config.svg?branch=master"/></a>
+[![Build Status](https://travis-ci.com/ooimo/home-assistant-config.svg?branch=master)](https://travis-ci.com/ooimo/home-assistant-config)
