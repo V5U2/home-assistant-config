@@ -8,7 +8,6 @@ views:
 # - !include lovelace/first-floor.yaml
   - panel: floorplan
     title: Floorplan
-    panel: false
     cards:
       - type: picture-elements
         image: /local/first.png
