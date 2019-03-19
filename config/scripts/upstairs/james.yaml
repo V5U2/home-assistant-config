@@ -1,0 +1,23 @@
+james_lightsoff:
+  alias: James Lights Off
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.ceiling
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.desk_lamp
+          - switch.bed_lamp
+
+nightlights_james:
+  alias: Night Mood
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.ceiling
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.bed_lamp
+          - switch.desk_lamp

@@ -1,0 +1,10 @@
+tvlights_theater:
+  alias: Movie Mode
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.theater_room
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.theater_lamp

@@ -1,0 +1,24 @@
+hallway_nightlight:
+  alias: "Night Lighting"
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness_pct: 20
+        entity_id:
+          - light.hue_white_lamp_2
+          - light.hue_ambiance_downlight_1
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_white_lamp_1
+
+hallway_daylight:
+  alias: "Day Lighting"
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness_pct: 100
+        entity_id:
+          - light.hue_white_lamp_2
+          - light.hue_ambiance_downlight_1
+          - light.hue_white_lamp_1
