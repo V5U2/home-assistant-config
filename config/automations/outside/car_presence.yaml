@@ -70,7 +70,12 @@
   action:
   - service: notify.pushover
     data:
-      message: "Garage door has been open for 15 minutes."
+      message: 'Garage door has been open for 15 minutes.'
+  - service: notify.twilio_sms
+    data:
+      message: 'Garage door has been open for 15 minutes.'
+      target:
+        - !secret ryan_number
 
 - alias: gate left open
   trigger:
@@ -82,4 +87,9 @@
   action:
   - service: notify.pushover
     data:
-      message: "Gate has been open for 5 minutes."
+      message: 'Gate has been open for 5 minutes.'
+  - service: notify.twilio_sms
+    data:
+      message: 'Gate has been open for 5 minutes.'
+      target:
+        - !secret ryan_number

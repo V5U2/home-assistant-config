@@ -1,0 +1,11 @@
+- platform: min_max
+  name: 'Average House Temperature'
+  entity_ids:
+    - sensor.server_temperature
+    - sensor.study_temperature
+
+- platform: min_max
+  name: 'Average House Humidity'
+  entity_ids:
+    - sensor.server_humidity
+    - sensor.study_humidity

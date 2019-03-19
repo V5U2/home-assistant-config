@@ -1,19 +1,12 @@
-- alias: Turn lights on at night
+# Set dark theme on startup
+- alias: 'Set theme'
   trigger:
-  - event: sunset
-    offset: -01:00:00
-    platform: sun
+    platform: homeassistant
+    event: start
   action:
-  - entity_id: group.garden_lights
-    service: homeassistant.turn_on
-
-- alias: Turn lights off at 1030
-  trigger:
-    platform: time
-    at: '22:30:00'
-  action:
-  - entity_id: group.garden_lights
-    service: homeassistant.turn_off
+    service: frontend.set_theme
+    data:
+      name: Midnight
 
 - alias: Hide Sun related info at night
   trigger:

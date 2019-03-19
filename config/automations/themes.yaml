@@ -1,9 +1,0 @@
-# Set dark theme on startup
-- alias: 'Set theme'
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-    service: frontend.set_theme
-    data:
-      name: Midnight
