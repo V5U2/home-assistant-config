@@ -1,0 +1,8 @@
+- name: pushover
+  platform: pushover
+  api_key: !secret pushover_api
+  user_key: !secret pushover_user
+
+- name: twilio_sms
+  platform: twilio_sms
+  from_number: 'Borrett'
