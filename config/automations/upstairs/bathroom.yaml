@@ -9,7 +9,7 @@
           float(states.sensor.average_house_humidity.attributes.mean)
         ) | round(3)
       }}
-    above: 10
+    above: 7
   action:
     service: homeassistant.turn_on
     entity_id: script.timed_bathroom_fan

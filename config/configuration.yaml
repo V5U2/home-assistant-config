@@ -120,9 +120,9 @@ input_boolean:
 
 switch: !include_dir_merge_list switches/
 automation: !include_dir_merge_list automations/
-group: !include_dir_merge_named groups/
 sensor: !include_dir_merge_list sensors/
-script: !include_dir_merge_list scripts/
+group: !include_dir_merge_named groups/
+script: !include_dir_merge_named scripts/
 
 notify: !include notifications.yaml
 binary_sensor: !include binary_sensors.yaml

@@ -54,3 +54,9 @@ cards:
 
   - type: picture-entity
     entity: camera.bom_radar
+
+  - type: media-control
+    entity: media_player.garage_tv
+
+  - type: media-control
+    entity: media_player.alfresco_speaker
