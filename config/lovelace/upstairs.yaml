@@ -5,12 +5,13 @@ badges:
   - sensor.aftership
 cards:
   - type: entities
-    title: James Bedroom Lights
-    show_header_toggle: true
+    title: James Bedroom
+    show_header_toggle: false
     entities:
       - script.nightlights_james
       - light.ceiling
       - switch.bed_lamp
+      - switch.desk_lamp
     
   - type: entities
     title: Hallway Lights
@@ -26,7 +27,7 @@ cards:
     title: Theater Lights
     show_header_toggle: true
     entities:
-      - light.theater_room
+      - light.yeelight_ct2_04cf8c757e90 
       - switch.theater_lamp
       - script.tvlights_theater
     
@@ -43,6 +44,7 @@ cards:
     show_header_toggle: false
     entities:
       - switch.bathroom_fan
+      - automation.turn_on_fan_when_humidity_is_high
       - sensor.bathroom_temperature
       - sensor.bathroom_humidity
     

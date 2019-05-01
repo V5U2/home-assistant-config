@@ -6,24 +6,15 @@ cards:
     entities:
       - sensor.study_temperature
       - sensor.study_humidity
-    
-  - type: entities
-    title: James Study
-    show_header_toggle: false
-    entities:
-      - switch.james_desk_lamp
 
   - type: media-control
     entity: media_player.front_room_tv
 
   - type: media-control
+    entity: media_player.apple_tv_2 
+  
+  - type: media-control
     entity: media_player.living_room_tv
 
   - type: media-control
     entity: media_player.james_bedroom_speaker
-
-  - type: entities
-    title: Living Room
-    show_header_toggle: false
-    entities:
-      - switch.living_room_lamp

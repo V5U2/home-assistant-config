@@ -14,7 +14,7 @@ cards:
     entities:
       - switch.backyard_garden_lights
       - switch.pool_lights
-      - sensor.rainbird_rainsensor
+      #- sensor.rainbird_rainsensor
 
   - type: entities
     title: Alfresco Lights
