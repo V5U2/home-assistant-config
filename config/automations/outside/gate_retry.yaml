@@ -1,0 +1,47 @@
+- alias: 'Retry gate open'
+  # Trigger the automation when there is an attempt to open the gate
+  trigger:
+    platform: mqtt
+    topic: 'sensor/gate/action1'
+    payload: 'OPEN'
+  condition:
+  # Check if the gate is currently closed
+  - condition: state
+    entity_id: 'cover.gate'
+    state: 'closed'
+  action:
+    # Wait 25 seconds to see if the door is open
+    - delay: 00:00:25
+    # Check if the state has changed to open
+    - condition: state
+      entity_id: cover.gate
+      state: 'closed'
+    # Retry opening if still closed
+    - service: cover.open_cover
+      entity_id: 'cover.gate'
+    # Wait 30 seconds before trying again
+    - delay: 00:00:30
+
+- alias: 'Retry gate close'
+  # Trigger the automation when there is an attempt to close the gate
+  trigger:
+    platform: mqtt
+    topic: 'sensor/gate/action1'
+    payload: 'OPEN'
+  condition:
+  # Check if the gate is currently open
+  - condition: state
+    entity_id: 'cover.gate'
+    state: 'open'
+  action:
+    # Wait 5 seconds to see if the door is closed
+    - delay: 00:00:05
+    # Check if the state has changed to closed
+    - condition: state
+      entity_id: cover.gate
+      state: 'open'
+    # Retry close if still open
+    - service: cover.close_cover
+      entity_id: 'cover.gate'
+    # Wait 30 seconds before trying again
+    - delay: 00:00:30

@@ -1,29 +1,29 @@
 - platform: ffmpeg_motion
   name: Garage Rear Motion
-  input: !secret camera1_rtsp
+  input: !secret camera1_rtsp_sub
   changes: 20
   reset: 60
 
 - platform: ffmpeg_motion
   name: Driveway Motion
-  input: !secret camera2_rtsp
+  input: !secret camera2_rtsp_sub
   changes: 20
   reset: 60
 
 - platform: ffmpeg_motion
   name: Garage Inside Motion
-  input: !secret camera3_rtsp
+  input: !secret camera3_rtsp_sub
   changes: 20
   reset: 60
 
 - platform: ffmpeg_motion
   name: Courtyard Motion
-  input: !secret camera4_rtsp
+  input: !secret camera4_rtsp_sub
   changes: 20
   reset: 60
 
 - platform: ffmpeg_motion
   name: Front Entrance Motion
-  input: !secret camera5_rtsp
+  input: !secret camera5_rtsp_sub
   changes: 20
   reset: 60
