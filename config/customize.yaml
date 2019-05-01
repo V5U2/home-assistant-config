@@ -79,3 +79,7 @@ sensor.rainsensor:
   friendly_name: Irrigation Rain Sensor
 sensor.rainbird_rainsensor:
   icon: 'mdi:water'
+
+# Yeelight
+light.yeelight_ct2_04cf8c757e90:
+  friendly_name: Theater Room

@@ -1,5 +1,0 @@
-- platform: yeelight
-  devices:
-    10.1.40.151:
-      name: Theater Room
-

@@ -17,11 +17,17 @@ system_health:
 recorder:
   purge_keep_days: 3
 
+
 # UI Modules
+
 logbook:
+
 updater:
+
 discovery:
+
 conversation:
+
 config:
 
 history:
@@ -56,12 +62,16 @@ lovelace:
 # Include modules
 
 sun:
+
 lifx:
+
 cast:
 
-rainbird:
-  host: !secret rainbird_host
-  password: !secret rainbird_password
+stream:
+
+#rainbird:
+#  host: !secret rainbird_host
+#  password: !secret rainbird_password
 
 openuv:
   api_key: !secret openuv_api
@@ -127,6 +137,5 @@ script: !include_dir_merge_named scripts/
 notify: !include notifications.yaml
 binary_sensor: !include binary_sensors.yaml
 camera: !include cameras.yaml
-light: !include lights.yaml
 device_tracker: !include trackers.yaml
 cover: !include covers.yaml

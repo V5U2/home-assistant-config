@@ -27,7 +27,7 @@
     entity_id: sensor.hue_dimmer_switch_1
     to: 2_click
   action:
-  - entity_id: light.theater_room
+  - entity_id: light.yeelight_ct2_04cf8c757e90 
     service: homeassistant.turn_on
 
 - alias: Theater Off
@@ -36,7 +36,7 @@
     entity_id: sensor.hue_dimmer_switch_1
     to: 2_hold
   action:
-  - entity_id: light.theater_room
+  - entity_id: light.yeelight_ct2_04cf8c757e90 
     service: homeassistant.turn_off
 
 

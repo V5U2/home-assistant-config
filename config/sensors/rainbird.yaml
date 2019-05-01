@@ -1,16 +1,16 @@
-- platform: rainbird
-  monitored_conditions:
-    - rainsensor
+# - platform: rainbird
+#   monitored_conditions:
+#     - rainsensor
 
-- platform: template
-  sensors:
-    rainbird_rainsensor:
-      friendly_name: "Irrigation Rain Sensor"
-      value_template: >-
-        {% if is_state('sensor.rainsensor', '0') %}
-          Dry
-        {% elif is_state('sensor.rainsensor', '1') %}
-          Wet
-        {% else %}
-          Error
-        {% endif %}
+# - platform: template
+#   sensors:
+#     rainbird_rainsensor:
+#       friendly_name: "Irrigation Rain Sensor"
+#       value_template: >-
+#         {% if is_state('sensor.rainsensor', '0') %}
+#           Dry
+#         {% elif is_state('sensor.rainsensor', '1') %}
+#           Wet
+#         {% else %}
+#           Error
+#         {% endif %}
