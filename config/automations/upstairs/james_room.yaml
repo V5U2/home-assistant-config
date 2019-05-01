@@ -90,3 +90,45 @@
   action:
   - entity_id: group.james_bedroom_lights
     service: homeassistant.turn_off
+
+
+## Monitors and TV
+
+- alias: Switched to plex
+  trigger: 
+  - platform: template 
+    value_template: >
+      {{ 
+        is_state_attr(
+          'media_player.sony_bravia_tv', 
+          'media_title', 'App'
+        ) 
+      }}
+  action: 
+  - service: homeassistant.turn_on
+    entity_id: script.bed_movie_mode
+
+- alias: Switched to PC
+  trigger: 
+  - platform: template 
+    value_template: >
+      {{ 
+        is_state_attr(
+          'media_player.sony_bravia_tv', 
+          'media_title', 'HDMI 1'
+        ) 
+      }}
+  action: 
+  - service: homeassistant.turn_on
+    entity_id: switch.monitors
+
+- alias: switched monitors on
+  trigger:
+    platform: state
+    entity_id: switch.james_triple_monitors
+    from: 'off'
+    to: 'on'
+  action:
+    - delay: 0:10
+    - entity_id: script.james_tv_monitor
+      service: homeassistant.turn_on

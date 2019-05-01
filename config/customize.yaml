@@ -83,3 +83,12 @@ sensor.rainbird_rainsensor:
 # Yeelight
 light.yeelight_ct2_04cf8c757e90:
   friendly_name: Theater Room
+
+# Rename TV
+media_player.sony_bravia_tv:
+  friendly_name: James TV
+media_player.kd_49x7500f:
+  friendly_name: James Chromecast
+switch.james_triple_monitors:
+  friendly_name: Monitors
+  icon: mdi:monitor

@@ -16,6 +16,7 @@
   payload_available: "Online"
   payload_not_available: "Offline"
 
+
 # Study Cabinet Sensors
 - platform: mqtt
   name: "Study Temperature"
@@ -27,6 +28,7 @@
   state_topic: "ds-cabinet/sensor"
   value_template: "{{ value_json['SI7021'].Humidity }}"
   unit_of_measurement: "%"
+
 
 # Bathroom Sensors
 - platform: mqtt

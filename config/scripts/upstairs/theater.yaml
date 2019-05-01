@@ -3,7 +3,7 @@ tvlights_theater:
   sequence:
     - service: light.turn_off
       data:
-        entity_id: light.theater_room
+        entity_id: light.yeelight_ct2_04cf8c757e90 
     - service: switch.turn_on
       data:
         entity_id: 

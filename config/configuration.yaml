@@ -92,6 +92,8 @@ hue:
 
 media_player:
   - platform: plex
+  - platform: braviatv
+    host: 10.1.40.130
 
 twilio:
   account_sid: !secret twilio_sid

@@ -1,8 +1,0 @@
-upstairs_hallway_lights:
-  name: Hallway Lights
-  entities:
-    - script.hallway_nightlight
-    - script.hallway_daylight
-    - light.hue_white_lamp_1
-    - light.hue_white_lamp_2
-    - light.hue_ambiance_downlight_1

@@ -21,3 +21,40 @@ nightlights_james:
         entity_id: 
           - switch.bed_lamp
           - switch.desk_lamp
+
+bed_movie_mode:
+  alias: Bed Movie Mode
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: 
+          - light.ceiling
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - switch.desk_lamp
+          - switch.monitors
+    - service: switch.turn_on
+      data: 
+        entity_id:
+          - switch.bed_lamp
+
+james_tv_monitor:
+  alias: James TV Monitor mode
+  sequence:
+    - service: homeassistant.turn_on
+      data:
+        entity_id: media_player.sony_bravia_tv
+    - delay: 0:05
+    - service: homeassistant.turn_on
+      data:
+        entity_id: media_player.sony_bravia_tv
+    - delay: 0:05
+    - service: homeassistant.turn_on
+      data:
+        entity_id: media_player.sony_bravia_tv
+    - delay: 0:05
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.sony_bravia_tv
+        source: 'HDMI 1'

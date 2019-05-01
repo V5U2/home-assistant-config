@@ -18,11 +18,31 @@
   payload_off: "OFF"
   retain: true
 
-# Bed Lamp
+# James Bed Lamp
 - platform: mqtt
   name: "Bed Lamp"
   command_topic: "cmnd/sonoff4/power"
   state_topic: "stat/sonoff4/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+# James Monitors
+- platform: mqtt
+  name: "james triple monitors"
+  command_topic: "cmnd/sonoff8/power"
+  state_topic: "stat/sonoff8/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+# Desk Lamp
+- platform: mqtt
+  name: "Desk Lamp"
+  command_topic: "cmnd/sonoff1/power"
+  state_topic: "stat/sonoff1/POWER"
   qos: 1
   payload_on: "ON"
   payload_off: "OFF"

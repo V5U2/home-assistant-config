@@ -12,6 +12,7 @@ cards:
       - light.ceiling
       - switch.bed_lamp
       - switch.desk_lamp
+      - switch.james_triple_monitors
     
   - type: entities
     title: Hallway Lights
@@ -50,3 +51,9 @@ cards:
     
   - type: media-control
     entity: media_player.james_bedroom_speaker
+
+  - type: media-control
+    entity: media_player.kd_49x7500f
+
+  - type: media-control
+    entity: media_player.sony_bravia_tv
