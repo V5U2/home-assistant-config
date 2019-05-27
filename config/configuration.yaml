@@ -10,15 +10,22 @@ homeassistant:
 frontend:
   themes: !include_dir_merge_named themes/
 
-# System Modules
+
+### System Modules
+
 http:
+
 system_health:
 
 recorder:
   purge_keep_days: 3
 
+influxdb:
+  host: !secret influxdb_ip
+  database: !secret influxdb_db
 
-# UI Modules
+
+### UI Modules
 
 logbook:
 
@@ -59,19 +66,9 @@ lovelace:
   mode: yaml
 
 
-# Include modules
+### Environmental
 
 sun:
-
-lifx:
-
-cast:
-
-stream:
-
-#rainbird:
-#  host: !secret rainbird_host
-#  password: !secret rainbird_password
 
 openuv:
   api_key: !secret openuv_api
@@ -86,18 +83,51 @@ openuv:
     # - current_ozone_level
     # - current_uv_index
 
+#rainbird:
+#  host: !secret rainbird_host
+#  password: !secret rainbird_password
+
+speedtestdotnet:
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+  scan_interval:
+    hours: 4
+
+
+### Lighting
+
+lifx:
+
 hue:
   bridges:
     - host: !secret hue_host
 
-media_player:
-  - platform: plex
-  - platform: braviatv
-    host: 10.1.40.130
+### Media Players
+
+cast:
+
+stream:
+
+
+### Notifications
 
 twilio:
   account_sid: !secret twilio_sid
   auth_token: !secret twilio_auth
+
+
+### Voice
+
+google_assistant:
+  project_id: !secret google_id
+  exposed_domains:
+    - switch
+    - light
+    - lifx
+
+### Communication
 
 mqtt:
   broker: !secret mqtt_host
@@ -108,25 +138,6 @@ mqtt:
   discovery: true
   discovery_prefix: homeassistant
 
-google_assistant:
-  project_id: !secret google_id
-  exposed_domains:
-    - switch
-    - light
-    - lifx
-
-speedtestdotnet:
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-  scan_interval:
-    hours: 4
-
-input_boolean:
-  holiday_mode:
-    name: Holiday Mode
-    initial: off
 
 # Includes
 
@@ -141,3 +152,9 @@ binary_sensor: !include binary_sensors.yaml
 camera: !include cameras.yaml
 device_tracker: !include trackers.yaml
 cover: !include covers.yaml
+media_player: !include media_players.yaml
+
+input_boolean:
+  holiday_mode:
+    name: Holiday Mode
+    initial: off
