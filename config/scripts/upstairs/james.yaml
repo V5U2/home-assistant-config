@@ -38,23 +38,3 @@ bed_movie_mode:
       data: 
         entity_id:
           - switch.bed_lamp
-
-james_tv_monitor:
-  alias: James TV Monitor mode
-  sequence:
-    - service: homeassistant.turn_on
-      data:
-        entity_id: media_player.sony_bravia_tv
-    - delay: 0:05
-    - service: homeassistant.turn_on
-      data:
-        entity_id: media_player.sony_bravia_tv
-    - delay: 0:05
-    - service: homeassistant.turn_on
-      data:
-        entity_id: media_player.sony_bravia_tv
-    - delay: 0:05
-    - service: media_player.select_source
-      data:
-        entity_id: media_player.sony_bravia_tv
-        source: 'HDMI 1'

@@ -45,7 +45,6 @@ cards:
     show_header_toggle: false
     entities:
       - switch.bathroom_fan
-      - automation.turn_on_fan_when_humidity_is_high
       - sensor.bathroom_temperature
       - sensor.bathroom_humidity
     

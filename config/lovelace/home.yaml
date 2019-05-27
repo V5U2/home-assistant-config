@@ -14,6 +14,9 @@ cards:
     entities:
       - switch.backyard_garden_lights
       - switch.pool_lights
+      - light.hue_ambiance_lamp_2
+      - automation.turn_garden_lights_on_at_night
+      - automation.turn_garden_lights_off_at_1030
       #- sensor.rainbird_rainsensor
 
   - type: entities
@@ -21,7 +24,7 @@ cards:
     show_header_toggle: true
     entities:
       - light.hue_ambiance_lamp_1
-      - light.hue_ambiance_lamp_2
+      
 
   - type: entities
     title: BOM Sensors

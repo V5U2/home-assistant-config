@@ -12,7 +12,7 @@
   accounts:
     - !secret steam_user
 
-- platform: hue_custom
+- platform: huesensor
   #ip_address: !secret hue_host
   #token: !secret hue_token
 
