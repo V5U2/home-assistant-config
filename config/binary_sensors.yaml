@@ -1,29 +1,65 @@
-- platform: ffmpeg_motion
-  name: Garage Rear Motion
-  input: !secret camera1_rtsp_sub
-  changes: 20
-  reset: 60
+# - platform: ffmpeg_motion
+#   name: Garage Rear Motion
+#   input: !secret camera1_rtsp_sub
+#   changes: 20
+#   reset: 60
 
-- platform: ffmpeg_motion
-  name: Driveway Motion
-  input: !secret camera2_rtsp_sub
-  changes: 20
-  reset: 60
+# - platform: ffmpeg_motion
+#   name: Driveway Motion
+#   input: !secret camera2_rtsp_sub
+#   changes: 20
+#   reset: 60
 
-- platform: ffmpeg_motion
-  name: Garage Inside Motion
-  input: !secret camera3_rtsp_sub
-  changes: 20
-  reset: 60
+# - platform: ffmpeg_motion
+#   name: Garage Inside Motion
+#   input: !secret camera3_rtsp_sub
+#   changes: 20
+#   reset: 60
 
-- platform: ffmpeg_motion
-  name: Courtyard Motion
-  input: !secret camera4_rtsp_sub
-  changes: 20
-  reset: 60
+# - platform: ffmpeg_motion
+#   name: Courtyard Motion
+#   input: !secret camera4_rtsp_sub
+#   changes: 20
+#   reset: 60
 
-- platform: ffmpeg_motion
-  name: Front Entrance Motion
-  input: !secret camera5_rtsp_sub
-  changes: 20
-  reset: 60
+# - platform: ffmpeg_motion
+#   name: Front Entrance Motion
+#   input: !secret camera5_rtsp_sub
+#   changes: 20
+#   reset: 60
+
+
+- platform: mqtt
+  name: "Garage Rear Motion"
+  state_topic: blue_iris/binary_sensor/cam1_motion/state
+  payload_on: "ON"
+  payload_off: "OFF"
+  device_class: motion
+
+- platform: mqtt
+  name: "Driveway Motion"
+  state_topic: blue_iris/binary_sensor/cam2_motion/state
+  payload_on: "ON"
+  payload_off: "OFF"
+  device_class: motion
+
+- platform: mqtt
+  name: "Garage Inside Motion"
+  state_topic: blue_iris/binary_sensor/cam3_motion/state
+  payload_on: "ON"
+  payload_off: "OFF"
+  device_class: motion
+
+- platform: mqtt
+  name: "Courtyard Motion"
+  state_topic: blue_iris/binary_sensor/cam4_motion/state
+  payload_on: "ON"
+  payload_off: "OFF"
+  device_class: motion
+
+- platform: mqtt
+  name: "Front Entrance Motion"
+  state_topic: blue_iris/binary_sensor/cam5_motion/state
+  payload_on: "ON"
+  payload_off: "OFF"
+  device_class: motion
