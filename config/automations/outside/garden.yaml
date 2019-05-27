@@ -1,4 +1,4 @@
-- alias: Turn lights on at night
+- alias: Turn Garden lights on at night
   trigger:
   - event: sunset
     offset: -01:00:00
@@ -7,7 +7,7 @@
   - entity_id: group.garden_lights
     service: homeassistant.turn_on
 
-- alias: Turn lights off at 1030
+- alias: Turn Garden lights off at 1030
   trigger:
     platform: time
     at: '22:30:00'

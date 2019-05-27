@@ -7,27 +7,3 @@
     service: frontend.set_theme
     data:
       name: Midnight
-
-- alias: Hide Sun related info at night
-  trigger:
-    platform: sun
-    event: sunset
-  action:
-    service: group.set_visibility
-    entity_id: 
-      - group.uvinfo
-      - group.pv
-    data:
-      visible: False
-
-- alias: Show Sun related info during the day
-  trigger:
-    platform: sun
-    event: sunrise
-  action:
-    service: group.set_visibility
-    entity_id: 
-      - group.uvinfo
-      - group.pv
-    data:
-      visible: True
