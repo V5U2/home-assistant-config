@@ -1,0 +1,2 @@
+# Provides OTA update password
+password: !secret ota_password

@@ -1,0 +1,13 @@
+esphome:
+  name: node2
+  platform: ESP8266
+  board: d1_mini
+
+wifi: !include includes/net_config.yaml
+api: !include includes/api_config.yaml
+ota: !include includes/ota_config.yaml
+
+# Enable logging
+logger:
+
+
