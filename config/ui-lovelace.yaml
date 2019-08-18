@@ -6,3 +6,6 @@ views:
   - !include lovelace/cameras.yaml
 # - !include lovelace/automations.yaml
 # - !include lovelace/first-floor.yaml
+resources:
+  - url: /local/mini-graph-card-bundle.js?v=0.4.3
+    type: module
