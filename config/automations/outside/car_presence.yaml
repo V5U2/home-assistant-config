@@ -1,35 +1,3 @@
-
-
-- alias: CarPresence1_gate_ON
-  trigger:
-    platform: state
-    entity_id: binary_sensor.CarPresence1
-    to: 'on'
-  condition:
-  - condition: state
-    entity_id: 'cover.gate'
-    state: 'closed'
-  action:
-  - service: cover.open_cover
-    entity_id: 'cover.gate'
-
-
-- alias: CarPresence1_gate_OFF
-  trigger:
-    platform: state
-    entity_id: binary_sensor.CarPresence1
-    to: 'off'
-    for:
-      minutes: 1
-  condition:
-  - condition: state
-    entity_id: 'cover.gate'
-    state: 'open'
-  action:
-  - service: cover.close_cover
-    entity_id: 'cover.gate'
-
-
 # Notify when covers are left open
 
 - alias: garage left open
@@ -43,11 +11,6 @@
   - service: notify.pushover
     data:
       message: 'Garage door has been open for 15 minutes.'
-  - service: notify.twilio_sms
-    data:
-      message: 'Garage door has been open for 15 minutes.'
-      target:
-        - !secret ryan_number
 
 - alias: gate left open
   trigger:
@@ -55,13 +18,8 @@
     entity_id: cover.gate
     to: 'open'
     for:
-      minutes: 5
+      minutes: 10
   action:
   - service: notify.pushover
     data:
-      message: 'Gate has been open for 5 minutes.'
-  - service: notify.twilio_sms
-    data:
-      message: 'Gate has been open for 5 minutes.'
-      target:
-        - !secret ryan_number
+      message: 'Gate has been open for 10 minutes.'

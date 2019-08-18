@@ -1,7 +1,7 @@
 title: Downstairs
 cards:
   - type: entities
-    title: Paul Study
+    title: Study
     show_header_toggle: false
     entities:
       - sensor.study_temperature
@@ -15,6 +15,3 @@ cards:
   
   - type: media-control
     entity: media_player.living_room_tv
-
-  - type: media-control
-    entity: media_player.james_bedroom_speaker

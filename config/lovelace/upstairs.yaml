@@ -3,33 +3,24 @@ badges:
   - device_tracker.james
   - device_tracker.ryan
   - sensor.aftership
-cards:
-  - type: entities
-    title: James Bedroom
-    show_header_toggle: false
-    entities:
-      - script.nightlights_james
-      - light.ceiling
-      - switch.bed_lamp
-      - switch.desk_lamp
-      - switch.james_triple_monitors
-    
+
+cards:    
   - type: entities
     title: Hallway Lights
     show_header_toggle: true
     entities:
       - script.hallway_nightlight
       - script.hallway_daylight
-      - light.hue_white_lamp_1
-      - light.hue_white_lamp_2
-      - light.hue_ambiance_downlight_1
+      - light.upstairs_hallway_east
+      - light.upstairs_hallway_west
+      - light.upstairs_hallway_stairs
     
   - type: entities
     title: Theater Lights
     show_header_toggle: true
     entities:
       - light.yeelight_ct2_04cf8c757e90 
-      - switch.theater_lamp
+      #- switch.theater_lamp
       - script.tvlights_theater
     
   - type: entities
@@ -45,14 +36,9 @@ cards:
     show_header_toggle: false
     entities:
       - switch.bathroom_fan
+      - input_boolean.bathroom_fan
       - sensor.bathroom_temperature
       - sensor.bathroom_humidity
-    
-  - type: media-control
-    entity: media_player.james_bedroom_speaker
 
   - type: media-control
-    entity: media_player.kd_49x7500f
-
-  - type: media-control
-    entity: media_player.sony_bravia_tv
+    entity: media_player.theater_tv

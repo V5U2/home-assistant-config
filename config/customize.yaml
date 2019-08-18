@@ -32,6 +32,7 @@ switch.bathroom_fan:
 switch.server_fan:
   icon: 'mdi:fan'
 
+# PV Array
 sensor.power_generation:
   icon: 'mdi:flash'
 sensor.energy_generation:
@@ -45,6 +46,8 @@ sensor.bathroom_humidity:
 sensor.server_humidity:
   icon: 'mdi:water-percent'
 sensor.study_humidity:
+  icon: 'mdi:water-percent'
+sensor.james_bedroom_humidity:
   icon: 'mdi:water-percent'
 
 # Garage Door
@@ -94,3 +97,9 @@ media_player.kd_49x7500f:
 switch.james_triple_monitors:
   friendly_name: Monitors
   icon: mdi:monitor
+
+# BOM
+sensor.bom_feels_like_c:
+  friendly_name: Temperature (Feels Like)
+sensor.bom_air_temp_c:
+  friendly_name: Outside Temperature

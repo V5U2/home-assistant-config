@@ -173,9 +173,14 @@ device_tracker: !include trackers.yaml
 cover: !include covers.yaml
 media_player: !include media_players.yaml
 
+# Input Booleans
+
 input_boolean:
   holiday_mode:
     name: Holiday Mode
+    initial: off
+  bathroom_fan:
+    name: Bathroom Fan Bypass
     initial: off
 
 # Climate Control
