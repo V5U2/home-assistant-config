@@ -18,7 +18,7 @@ http:
 system_health:
 
 recorder:
-  purge_keep_days: 3
+  purge_keep_days: 14
 
 influxdb:
   host: !secret influxdb_ip
@@ -45,6 +45,8 @@ history:
       - group
       - media_player
       - script
+      - input_boolean
+      - climate
     entities:
       - sensor.bom_feels_like_c
       - sensor.bom_air_temp_c
@@ -61,6 +63,23 @@ history:
       - sensor.rainsensor
       - binary_sensor.protection_window
       - light.empty
+      - light.hallway
+      - sensor.plexlanbandwidth
+      - sensor.plexlanbandwidthrounded
+      - sensor.plexstreamcount 
+      - sensor.plextotalbandwidth
+      - sensor.plexwanbandwidth
+      - sensor.plexwanbandwidthrounded
+      - sensor.sonarr_upcoming
+      - sensor.sonarr_wanted
+      - sensor.sonarr_queue
+      - sensor.sonarr_series
+      - sensor.tautulli
+      - binary_sensor.carpresence1
+      - sensor.carpresence1_signal
+      - sensor.carpresence1_uptime
+      - sensor.radarr_movies
+      - sensor.radarr_upcoming
 
 lovelace:
   mode: yaml
