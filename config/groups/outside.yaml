@@ -5,6 +5,15 @@ garden:
     - switch.pool_lights
     - sensor.rainbird_rainsensor
 
+external_lights:
+  name: External Lights
+  entities:
+    - light.front_entrance
+    - switch.garage_security
+    - light.alfresco_south
+    - light.alfresco_north
+    
+
 alfresco_lights:
   name: Alfresco Lights
   entities:

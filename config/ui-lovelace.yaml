@@ -3,7 +3,7 @@ views:
   - !include lovelace/home.yaml 
   - !include lovelace/upstairs.yaml
   - !include lovelace/downstairs.yaml
-  - !include lovelace/cameras.yaml
+  - !include lovelace/security.yaml
 # - !include lovelace/automations.yaml
 # - !include lovelace/first-floor.yaml
 resources:

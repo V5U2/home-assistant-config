@@ -17,6 +17,8 @@ switch.james_desk_lamp:
   icon: 'mdi:lightbulb'
 switch.living_room_lamp:
   icon: 'mdi:lightbulb'
+switch.security_garage_front:
+  icon: 'mdi:lightbulb'
 
 # Hide Sun
 sun.sun:

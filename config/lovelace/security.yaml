@@ -1,4 +1,4 @@
-title: Cameras
+title: Security
 badges:
 cards:
   - type: entities
@@ -10,7 +10,21 @@ cards:
       - binary_sensor.garage_inside_motion
       - binary_sensor.garage_rear_motion
       - binary_sensor.courtyard_motion
+  
+  - type: entities
+    title: Security Lights
+    show_header_toggle: true
+    entities:
+      - light.front_entrance
+      - switch.garage_security
+      - group.external_lights
 
+  - type: entities
+    title: Holiday Mode
+    show_header_toggle: false
+    entities:
+      - input_boolean.holiday_mode
+      
   - type: picture-entity
     entity: camera.front_entrance
 
