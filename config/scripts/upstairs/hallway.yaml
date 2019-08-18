@@ -5,12 +5,12 @@ hallway_nightlight:
       data:
         brightness_pct: 20
         entity_id:
-          - light.hue_white_lamp_2
-          - light.hue_ambiance_downlight_1
+          - light.upstairs_hallway_west
+          - light.upstairs_hallway_stairs
     - service: light.turn_off
       data:
         entity_id:
-          - light.hue_white_lamp_1
+          light.upstairs_hallway_east
 
 hallway_daylight:
   alias: "Day Lighting"
@@ -19,6 +19,6 @@ hallway_daylight:
       data:
         brightness_pct: 100
         entity_id:
-          - light.hue_white_lamp_2
-          - light.hue_ambiance_downlight_1
-          - light.hue_white_lamp_1
+          - light.upstairs_hallway_east
+          - light.upstairs_hallway_west
+          - light.upstairs_hallway_stairs

@@ -6,3 +6,8 @@ upstairs_hallway_lights:
     - light.upstairs_hallway_stairs
 
 james_lights:
+  name: All Lights
+  entities:
+    - light.ceiling
+    - switch.desk_lamp
+    - switch.bed_lamp

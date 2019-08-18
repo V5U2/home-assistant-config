@@ -1,0 +1,55 @@
+title: James
+badges:
+  - device_tracker.james
+
+cards:
+  - type: horizontal-stack
+    cards:
+      - entity: switch.bed_lamp
+        type: entity-button
+        tap_action:
+          action: toggle
+      - entity: switch.desk_lamp
+        type: entity-button
+        tap_action:
+          action: toggle
+      - entity: switch.james_triple_monitors
+        type: entity-button
+        tap_action:
+          action: toggle
+      - entity: group.james_lights
+        type: entity-button
+        tap_action:
+          action: toggle
+
+  - type: light
+    entity: light.ceiling
+
+  - type: thermostat
+    entity: climate.james
+
+  # - type: sensor
+  #   entity: sensor.james_bedroom_temperature
+  #   name: Temperature
+  #   graph: line
+
+  - type: sensor
+    entity: sensor.james_bedroom_humidity
+    name: Humidity
+    graph: line
+
+  - type: entities
+    title: Scenes
+    show_header_toggle: false
+    entities:
+      - script.nightlights_james
+      - script.bed_movie_mode
+
+  - type: media-control
+    entity: media_player.james_bedroom_speaker
+
+  - type: media-control
+    entity: media_player.kd_49x7500f
+
+  - type: media-control
+    entity: media_player.sony_bravia_tv

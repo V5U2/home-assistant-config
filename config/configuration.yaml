@@ -177,3 +177,15 @@ input_boolean:
   holiday_mode:
     name: Holiday Mode
     initial: off
+
+# Climate Control
+
+climate:
+  - platform: generic_thermostat
+    name: James
+    heater: switch.james_heater
+    target_sensor: sensor.james_bedroom_temperature
+    min_temp: 15
+    max_temp: 28
+    cold_tolerance: 1.5
+    hot_tolerance: 1.5

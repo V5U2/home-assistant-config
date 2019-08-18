@@ -2,6 +2,7 @@ title: Home
 views:
   - !include lovelace/home.yaml 
   - !include lovelace/upstairs.yaml
+  - !include lovelace/james.yaml
   - !include lovelace/downstairs.yaml
   - !include lovelace/security.yaml
 # - !include lovelace/automations.yaml

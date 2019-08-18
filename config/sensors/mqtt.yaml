@@ -47,3 +47,21 @@
   availability_topic: "tele/sonoff3/LWT"
   payload_available: "Online"
   payload_not_available: "Offline"
+
+# James Bedroom Sensors
+- platform: mqtt
+  name: "James Bedroom Temperature"
+  state_topic: "tele/sonoff4/SENSOR"
+  value_template: "{{ value_json['SI7021'].Temperature }}"
+  unit_of_measurement: "°C"
+  availability_topic: "tele/sonoff3/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "James Bedroom Humidity"
+  state_topic: "tele/sonoff4/SENSOR"
+  value_template: "{{ value_json['SI7021'].Humidity }}"
+  unit_of_measurement: "%"
+  availability_topic: "tele/sonoff3/LWT"
+  payload_available: "Online"
+  payload_not_available: "Offline"

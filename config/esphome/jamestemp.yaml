@@ -1,0 +1,25 @@
+esphome:
+  name: jamestemp
+  platform: ESP8266
+  board: d1_mini
+
+wifi: !include includes/net_config.yaml
+api: !include includes/api_config.yaml
+ota: !include includes/ota_config.yaml
+
+# Enable logging
+logger:
+
+switch:
+  - platform: gpio
+    name: "James Room Relay"
+    pin: D1
+
+# sensor:
+#   - platform: dht
+#     pin: D4
+#     temperature:
+#       name: "James Room Temperature"
+#     humidity:
+#       name: "James Room Humidity"
+#     update_interval: 60s

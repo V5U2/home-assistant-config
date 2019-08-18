@@ -48,9 +48,10 @@
   payload_off: "OFF"
   retain: true
 
-# Theater Lamp
+# # Theater Lamp - Temp used as heater control
 - platform: mqtt
-  name: "Theater Lamp"
+  #name: "Theater Lamp"
+  name: "James Heater"
   command_topic: "cmnd/sonoff5/power"
   state_topic: "stat/sonoff5/POWER"
   qos: 1

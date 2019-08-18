@@ -1,4 +1,4 @@
-title: Outside
+title: Home
 cards:
   
   - type: entities
@@ -14,7 +14,6 @@ cards:
     entities:
       - switch.backyard_garden_lights
       - switch.pool_lights
-      - light.hue_ambiance_lamp_2
       - automation.turn_garden_lights_on_at_night
       - automation.turn_garden_lights_off_at_1030
       #- sensor.rainbird_rainsensor
@@ -23,37 +22,35 @@ cards:
     title: Alfresco Lights
     show_header_toggle: true
     entities:
-      - light.hue_ambiance_lamp_1
-      
+      - light.alfresco_south
+      - light.alfresco_north
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Inside Humidity
+        icon: mdi:water-percent
+        line_width: 8
+        font_size: 50
+        entities:
+          - sensor.average_house_humidity
+      - type: custom:mini-graph-card
+        name: Inside Temperature
+        icon: mdi:thermometer
+        line_width: 8
+        font_size: 50
+        entities:
+          - sensor.average_house_temperature
 
   - type: entities
-    title: BOM Sensors
+    title: Weather
     show_header_toggle: false
     entities:
-      - sensor.bom_feels_like_c
       - sensor.bom_air_temp_c
+      - sensor.bom_feels_like_c
       - sensor.bom_relative_humidity
-
-  - type: entities
-    title: Speedtest
-    show_header_toggle: false
-    entities:
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - sensor.speedtest_ping
-
-  - type: entities
-    title: UV Information
-    show_header_toggle: false
-    entities:
       - sensor.current_uv_level
       - sensor.skin_type_1_safe_exposure_time
-
-  - type: entities
-    title: Holiday Mode
-    show_header_toggle: false
-    entities:
-      - input_boolean.holiday_mode
 
   - type: picture-entity
     entity: camera.bom_radar
